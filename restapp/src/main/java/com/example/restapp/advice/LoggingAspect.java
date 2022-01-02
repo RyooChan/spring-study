@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component      // 서버가 로딩할 때 이 컴포넌트가 같이 로딩된다. 즉 서버가 start될 때 같이 적용된다.
 public class LoggingAspect {
 
-    @Around("execution(* com.example.restapp.controller.UserController.*(..))")
+    @Around("execution(* com.example.restapp.controller.UserController.*(..))") // rule에 의한 메서드 정의
     public Object setLog(ProceedingJoinPoint pjp) throws Throwable {
         System.out.println("실행 시작: "
                 + pjp.getSignature().getDeclaringTypeName() + "."

@@ -1,5 +1,6 @@
 package com.example.restapp.controller;
 
+import com.example.restapp.annotation.TokenRequired;
 import com.example.restapp.model.User;
 import com.example.restapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @TokenRequired
     @GetMapping("")
     public List<User> getAllUsers() {
         return userService.getUsers();
