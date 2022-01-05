@@ -5,3 +5,6 @@
 
 ## spring-petclinic
 * spring 공식 예제 pet clinic 기반 프로젝트
+
+## restapp
+* spring boot의 api활용과 spring security의 JWT방식을 통한 토큰 인증 방식 공부 프로젝트
