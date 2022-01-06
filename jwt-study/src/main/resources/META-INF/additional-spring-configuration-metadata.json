@@ -4,5 +4,10 @@
       "name": "spring.h2.console",
       "type": "java.lang.String",
       "description": "Description for spring.h2.console."
-  }
-] }
+    },
+    {
+      "name": "jwt.token-validity-in-seconds",
+      "type": "java.lang.String",
+      "description": "Description for jwt.token-validity-in-seconds."
+    }
+  ] }
