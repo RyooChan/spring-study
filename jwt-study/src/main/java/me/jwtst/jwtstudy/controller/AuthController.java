@@ -37,7 +37,7 @@ public class AuthController {
                 new UsernamePasswordAuthenticationToken(loginDto.getUsername(), loginDto.getPassword());
 
         // 그 authenticationToken을 통해 authenticate메소드 실행 될 때에
-        // service의 CustimUserDetailsService 실행
+        // service의 CustomUserDetailsService 실행
         // 그 결과값을 통해 authentication객체 생성 후 SecurityContexstHolder저장
         Authentication authentication = authenticationManagerBuilder.getObject().authenticate(authenticationToken);
         SecurityContextHolder.getContext().setAuthentication(authentication);
@@ -49,6 +49,7 @@ public class AuthController {
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.add(JwtFilter.AUTHORIZATION_HEADER, "Bearer " + jwt);
 
+        // 토큰 전달
         return new ResponseEntity<>(new TokenDto(jwt), httpHeaders, HttpStatus.OK);
     }
 }
