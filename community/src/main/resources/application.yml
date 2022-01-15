@@ -1,0 +1,31 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 606937352946-e4gmk6bchvb6aad2es1h8eco0amrr775.apps.googleusercontent.com
+            client-secret: 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
+custom:
+  oauth2:
+    kakao:
+      client-id: 7d0cbc0910769fa9a131e338ac5f1d20
+
+#google:
+#  client:
+#    clientId: clientIdTest
+#    clientSecret: clientSecretTest
+#    accessTokenUri: https://accounts.google.com/o/oauth2/token
+#    userAuthorizationUri: https://accounts.google.com/o/oauth2/auth
+#    scope: email, profile
+#  resource:
+#    userInfoUri: https://www.googleapis.com/oauth2/v2/userinfo
+#
+#kakao:
+#  client:
+#    clientId: clientIdTest
+#    accessTokenUri: https://kauth.kakao.com/oauth/token
+#    userAuthorizationUri: https://kauth.kakao.com/oauth/authorize
+#  resource:
+#    userInfoUri: https://kapi.kakao.com/v1/user/me
+

@@ -30,7 +30,7 @@ public class UserController {
             @Valid @RequestBody UserDto userDto
     ) {
         return ResponseEntity.ok(userService.signup(userDto));
-    }
+     }
 
     @GetMapping("/user")
     @PreAuthorize("hasAnyRole('USER','ADMIN')") // 유저와 운영자 둘 다 호출 가능하다.
